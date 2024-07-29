@@ -22,6 +22,9 @@ vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
 vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
+-- Sive file
+vim.keymap.set('n', '<C-s>', ':w<CR>', opts)
+
 -----------------
 -- Visual mode --
 -----------------
@@ -30,6 +33,15 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
--- turn to normal mode
-vim.keymap.set( "i", "jk", "<esc>") 
+-- Turn to normal mode
 vim.keymap.set( "v", "jk", "<esc>")
+
+-----------------
+-- Insert mode --
+-----------------
+
+-- Turn to normal mode
+vim.keymap.set( "i", "jk", "<esc>")
+
+-- Sive file
+vim.keymap.set('i', '<C-s>', '<esc>:w<CR>', opts)

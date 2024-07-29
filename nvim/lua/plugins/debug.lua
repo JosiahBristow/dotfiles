@@ -8,11 +8,10 @@ return {
     },
     opts = {
       handlers = {},
-      ensure_installed = {
-        "codelldb",
-      }
+      ensure_installed = { "codelldb" }
     }
   },
+
   {
     "mfussenegger/nvim-dap",
     event = "VeryLazy",
@@ -89,6 +88,7 @@ return {
       vim.fn.sign_define('DapStopped', dap_breakpoint.stopped)
     end,
   },
+
   {
     "rcarriga/nvim-dap-ui",
     event = "VeryLazy",
@@ -128,6 +128,7 @@ return {
       }
     end,
   },
+
   {
     "theHamsta/nvim-dap-virtual-text",
     opts = {},

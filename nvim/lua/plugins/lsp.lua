@@ -13,16 +13,18 @@ return {
       require("mason").setup()
     end,
   },
+
   {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,
     opts = {
       -- A list of servers to automatically install if they're not already installed
-      ensure_installed = { 'pylsp', 'lua_ls', 'rust_analyzer', 'clangd', 'html', 'pyright' }, -- don't forgrt to install codelldb for debug
+      ensure_installed = { 'pylsp','pyright', 'lua_ls', 'rust_analyzer', 'clangd', 'html',  }, -- don't forgrt to install codelldb for debug
 
       auto_install = false,
     },
   },
+
   {
     "neovim/nvim-lspconfig",
     lazy = false,
