@@ -233,6 +233,9 @@ return {
         { "<leader>st", "<cmd>TodoTelescope<cr>", desc = "Todo" },
         { "<leader>sT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme" },
       },
+      config = function()
+        require("todo-comments").setup(opts)
+      end
     },
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -264,5 +267,60 @@ return {
 
       require("ibl").setup { indent = { highlight = highlight } }
     end
+  },
+
+  {
+    "dnlhc/glance.nvim",
+    config = function()
+      require('glance').setup({})
+      vim.keymap.set('n', 'gD', '<CMD>Glance definitions<CR>')
+      vim.keymap.set('n', 'gR', '<CMD>Glance references<CR>')
+      vim.keymap.set('n', 'gY', '<CMD>Glance type_definitions<CR>')
+      vim.keymap.set('n', 'gM', '<CMD>Glance implementations<CR>')
+    end,
+  },
+
+  {
+    "utilyre/sentiment.nvim",
+    version = "*",
+    event = "VeryLazy", -- keep for lazy loading
+    opts = {
+      -- config
+    },
+    init = function()
+      -- `matchparen.vim` needs to be disabled manually in case of lazy loading
+      vim.g.loaded_matchparen = 1
+    end,
+  },
+
+  {
+    "sidebar-nvim/sidebar.nvim",
+    config = function()
+      local sidebar = require("sidebar-nvim")
+      local opts = {open = true}
+      sidebar.setup(opts)
+    end
+  },
+
+  {
+    "luukvbaal/statuscol.nvim", config = function()
+        -- local builtin = require("statuscol.builtin")
+        require("statuscol").setup({
+        -- configuration goes here, for example:
+        -- relculright = true,
+        -- segments = {
+        --   { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
+        --   {
+        --     sign = { namespace = { "diagnostic/signs" }, maxwidth = 2, auto = true },
+        --     click = "v:lua.ScSa"
+        --   },
+        --   { text = { builtin.lnumfunc }, click = "v:lua.ScLa", },
+        --   {
+        --     sign = { name = { ".*" }, maxwidth = 2, colwidth = 1, auto = true, wrap = true },
+        --     click = "v:lua.ScSa"
+        --   },
+        -- }
+        })
+    end,
   }
 }

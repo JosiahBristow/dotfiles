@@ -36,6 +36,7 @@ vim.keymap.set('v', '>', '>gv', opts)
 -- Turn to normal mode
 vim.keymap.set( "v", "jk", "<esc>")
 
+
 -----------------
 -- Insert mode --
 -----------------
