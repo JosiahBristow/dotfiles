@@ -1,7 +1,7 @@
 -- define common options
 local opts = {
-    noremap = true,      -- non-recursive
-    silent = true,       -- do not show message
+  noremap = true,   -- non-recursive
+  silent = true,    -- do not show message
 }
 
 -----------------
@@ -34,7 +34,7 @@ vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
 -- Turn to normal mode
-vim.keymap.set( "v", "jk", "<esc>")
+vim.keymap.set("v", "jk", "<esc>")
 
 
 -----------------
@@ -42,7 +42,7 @@ vim.keymap.set( "v", "jk", "<esc>")
 -----------------
 
 -- Turn to normal mode
-vim.keymap.set( "i", "jk", "<esc>")
+vim.keymap.set("i", "jk", "<esc>")
 
 -- Sive file
 vim.keymap.set('i', '<C-s>', '<esc>:w<CR>', opts)

@@ -2,12 +2,12 @@ return {
   {
     "williamboman/mason.nvim",
     lazy = false,
-        ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
+    ui = {
+      icons = {
+        package_installed = "✓",
+        package_pending = "➜",
+        package_uninstalled = "✗"
+      }
     },
     config = function()
       require("mason").setup()
@@ -19,7 +19,7 @@ return {
     lazy = false,
     opts = {
       -- A list of servers to automatically install if they're not already installed
-      ensure_installed = { 'pylsp','pyright', 'lua_ls', 'rust_analyzer', 'clangd', 'html',  }, -- don't forgrt to install codelldb for debug
+      ensure_installed = { 'pylsp', 'pyright', 'lua_ls', 'rust_analyzer', 'clangd', 'html', }, -- don't forgrt to install codelldb for debug
 
       auto_install = false,
     },
